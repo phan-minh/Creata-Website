@@ -1,0 +1,117 @@
+.footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg-elev);
+  padding-top: clamp(52px, 7vw, 84px);
+  padding-bottom: 32px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 1.4fr;
+  gap: clamp(32px, 5vw, 64px);
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.slogan {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--text-soft);
+  margin-top: 20px;
+}
+
+.tag {
+  color: var(--muted-dim);
+  font-size: 0.9rem;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.colTitle {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted-dim);
+  margin-bottom: 20px;
+}
+
+.linksCol nav {
+  display: grid;
+  gap: 12px;
+}
+
+.linksCol a {
+  color: var(--text-soft);
+  font-size: 0.96rem;
+  width: fit-content;
+  transition: color 0.2s var(--ease);
+}
+
+.linksCol a:hover {
+  color: var(--violet-bright);
+}
+
+.address {
+  color: var(--muted);
+  font-size: 0.94rem;
+  max-width: 40ch;
+  margin-bottom: 16px;
+}
+
+.email {
+  display: block;
+  color: var(--text-soft);
+  font-size: 0.96rem;
+  margin-bottom: 6px;
+  width: fit-content;
+}
+
+.email:hover {
+  color: var(--violet-bright);
+}
+
+.social {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.social a {
+  padding: 8px 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  font-size: 0.84rem;
+  color: var(--text-soft);
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease),
+    background 0.2s var(--ease);
+}
+
+.social a:hover {
+  border-color: var(--violet-bright);
+  color: #fff;
+  background: rgba(157, 92, 255, 0.12);
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 28px;
+  color: var(--muted-dim);
+  font-size: 0.86rem;
+}
+
+.legalVi {
+  font-style: italic;
+}
+
+@media (max-width: 780px) {
+  .top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

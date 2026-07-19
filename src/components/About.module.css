@@ -1,0 +1,60 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+  margin-top: 52px;
+}
+
+.intro p {
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 1.9vw, 1.5rem);
+  line-height: 1.6;
+  color: var(--text-soft);
+}
+
+.pillars {
+  display: grid;
+  gap: 20px;
+}
+
+.pillar {
+  position: relative;
+  padding: 28px 30px;
+  border-radius: var(--radius);
+  background: var(--grad-soft);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.pillar::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--grad-brand);
+}
+
+.pillarTag {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--violet-bright);
+  margin-bottom: 12px;
+}
+
+.pillar p {
+  color: var(--text-soft);
+  font-size: 1.02rem;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
