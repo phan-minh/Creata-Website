@@ -16,6 +16,13 @@
   border-bottom-color: var(--border);
 }
 
+/* When the mobile drawer is open, keep the header bar fully opaque so the
+   logo/close row never shows the page content behind it. */
+.menuOpen {
+  background: var(--bg);
+  border-bottom-color: var(--border);
+}
+
 .inner {
   display: flex;
   align-items: center;
@@ -61,9 +68,10 @@
 
 .navLink {
   position: relative;
-  padding: 8px 14px;
+  padding: 8px 13px;
   font-size: 0.92rem;
   font-weight: 500;
+  white-space: nowrap;
   color: var(--text-soft);
   border-radius: 8px;
   transition: color 0.2s var(--ease), background 0.2s var(--ease);
@@ -132,10 +140,14 @@
 .mobileNav {
   position: fixed;
   inset: 74px 0 0 0;
-  background: rgba(8, 7, 12, 0.97);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  /* Sits above the header bar and all page content. */
+  z-index: 99;
+  /* Fully opaque solid background — do NOT rely on backdrop-filter, which is
+     unsupported/unreliable on some mobile browsers (e.g. Samsung Internet) and
+     would let the page content show through the menu. */
+  background: var(--bg);
   padding: 32px var(--gutter);
+  overflow-y: auto;
   transform: translateY(-12px);
   opacity: 0;
   pointer-events: none;
@@ -170,9 +182,13 @@
   justify-content: center;
 }
 
-@media (max-width: 940px) {
-  .desktopNav,
-  .cta {
+@media (max-width: 1140px) {
+  .desktopNav {
+    display: none;
+  }
+  /* a.cta raises specificity above the global `.btn { display: inline-flex }`
+     so the header CTA is reliably hidden on mobile regardless of CSS order */
+  a.cta {
     display: none;
   }
   .burger {

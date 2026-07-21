@@ -31,6 +31,18 @@
   overflow: hidden;
 }
 
+.photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Landscape source: nudge horizontal focus so the founder sits centred
+     in the portrait crop (subject is slightly left of centre in the photo). */
+  object-position: 40% 20%;
+  z-index: 2;
+}
+
 .initials {
   font-family: var(--font-serif);
   font-weight: 900;

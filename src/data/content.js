@@ -18,7 +18,7 @@ export const nav = [
   { label: 'Services', href: '#services' },
   { label: 'Industries', href: '#industries' },
   { label: 'Products', href: '#products' },
-  { label: 'Leadership', href: '#leadership' },
+  { label: 'Meet our Founder', href: '#leadership' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -171,7 +171,7 @@ export const projects = [
     text: 'Exploring the evolving behaviors, market shifts, and emerging opportunities shaping the next generation of quick commerce.',
   },
   {
-    kicker: 'Prestige & Premium',
+    kicker: 'FMCG',
     title: 'Unlocking Premium Market Potential',
     text: 'Evaluating strategic moats, consumer friction, and market entry dynamics to successfully penetrate the high-margin prestige segment.',
   },
@@ -181,6 +181,8 @@ export const leadership = {
   name: 'Pham My Linh',
   alias: 'Alese',
   role: 'Founder & Principal Advisor',
+  // Founder portrait — file lives in /public. Falls back to initials if missing.
+  photo: '/founder.jpg',
   bio: "A high-impact Strategic Intelligence and Platform Growth Leader with over 16 years of expertise translating complex market data into decisive commercial triumphs. At GHN Express — Vietnam's leading e-logistics provider — she weaponized marketplace insights to orchestrate a nationwide brand repositioning that secured the #1 position in Share of Voice, captured 27% SME market share, and anchored the industry's highest retention rate within the highest-value merchant segment.",
   bioExtended:
     "A proven platform architect, she pioneered the strategic corporate collaboration between GHN and Ahamove to launch same-day delivery, and previously steered platform dynamics as Head of Operations at Be Group. At PNJ Group, she leveraged CRM analytics from 1.8M+ premium consumers to accelerate both retention and new-user acquisition for PNJ Watch. Grounded in Nielsen's rigorous multi-market research pedigree, she delivers the brand-health mastery and predictive intelligence that fuel ecosystem-scale growth.",
@@ -196,14 +198,7 @@ export const clients = {
   title: 'Trusted by Industry Leaders',
   subtitle: 'Powering the decisions of those who shape the market.',
   // Placeholder logos — replace names/logos when provided by the client.
-  logos: [
-    'GHN Express',
-    'Be Group',
-    'PNJ Group',
-    'Ahamove',
-    'Nielsen',
-    'Grab',
-  ],
+  logos: ['GHN Express', 'Be Group', 'PNJ Group', 'Ahamove', 'Nielsen'],
 }
 
 export const process = {
@@ -236,7 +231,7 @@ export const process = {
 export const contact = {
   address:
     'Floor 12 — Tower A2, Viettel Building, 285 Cach Mang Thang Tam, Hoa Hung Ward, District 10, Ho Chi Minh City, Vietnam.',
-  emails: ['alese.pham@creata.xxx', 'connect@creata.xxx'],
+  emails: ['connect@creata-lab.com'],
   phone: '',
   // Google Maps embed for the Viettel Building address above.
   mapQuery: '285 Cách Mạng Tháng Tám, Phường Hòa Hưng, Quận 10, Hồ Chí Minh',

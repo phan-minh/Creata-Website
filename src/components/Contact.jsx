@@ -3,12 +3,6 @@ import Reveal from './Reveal.jsx'
 import { MapPinIcon, MailIcon, PhoneIcon } from './Icons.jsx'
 import styles from './Contact.module.css'
 
-const socialLinks = [
-  { key: 'linkedin', label: 'LinkedIn' },
-  { key: 'facebook', label: 'Facebook' },
-  { key: 'zalo', label: 'Zalo' },
-]
-
 export default function Contact() {
   const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(
     contact.mapQuery,
@@ -68,20 +62,6 @@ export default function Contact() {
                 </li>
               )}
             </ul>
-
-            <div className={styles.social}>
-              {socialLinks.map((s) => (
-                <a
-                  key={s.key}
-                  href={contact.social[s.key] || '#'}
-                  aria-label={s.label}
-                  target={contact.social[s.key] ? '_blank' : undefined}
-                  rel="noreferrer"
-                >
-                  {s.label}
-                </a>
-              ))}
-            </div>
           </Reveal>
 
           {/* Right — map */}

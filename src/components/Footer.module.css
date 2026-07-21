@@ -72,28 +72,6 @@
   color: var(--violet-bright);
 }
 
-.social {
-  display: flex;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-.social a {
-  padding: 8px 16px;
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-  font-size: 0.84rem;
-  color: var(--text-soft);
-  transition: border-color 0.2s var(--ease), color 0.2s var(--ease),
-    background 0.2s var(--ease);
-}
-
-.social a:hover {
-  border-color: var(--violet-bright);
-  color: #fff;
-  background: rgba(157, 92, 255, 0.12);
-}
-
 .bottom {
   display: flex;
   flex-wrap: wrap;

@@ -23,35 +23,42 @@ export default function Header() {
   }, [open])
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
-      <div className={`container ${styles.inner}`}>
-        <Logo />
+    <>
+      <header
+        className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${
+          open ? styles.menuOpen : ''
+        }`}
+      >
+        <div className={`container ${styles.inner}`}>
+          <Logo />
 
-        <nav className={styles.desktopNav} aria-label="Primary">
-          {nav.map((item) => (
-            <a key={item.href} href={item.href} className={styles.navLink}>
-              {item.label}
-            </a>
-          ))}
-        </nav>
+          <nav className={styles.desktopNav} aria-label="Primary">
+            {nav.map((item) => (
+              <a key={item.href} href={item.href} className={styles.navLink}>
+                {item.label}
+              </a>
+            ))}
+          </nav>
 
-        <a href="#work" className={`btn btn-primary ${styles.cta}`}>
-          Explore Our Work
-        </a>
+          <a href="#work" className={`btn btn-primary ${styles.cta}`}>
+            Explore Our Work
+          </a>
 
-        <button
-          className={styles.burger}
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span className={open ? styles.barTop : ''} />
-          <span className={open ? styles.barMid : ''} />
-          <span className={open ? styles.barBot : ''} />
-        </button>
-      </div>
+          <button
+            className={styles.burger}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span className={open ? styles.barTop : ''} />
+            <span className={open ? styles.barMid : ''} />
+            <span className={open ? styles.barBot : ''} />
+          </button>
+        </div>
+      </header>
 
-      {/* Mobile drawer */}
+      {/* Mobile drawer — kept OUTSIDE <header> so the header's backdrop-filter
+          (added on scroll) never becomes its containing block and shrinks it. */}
       <div className={`${styles.mobileNav} ${open ? styles.mobileOpen : ''}`}>
         <nav aria-label="Mobile">
           {nav.map((item) => (
@@ -64,6 +71,6 @@ export default function Header() {
           </a>
         </nav>
       </div>
-    </header>
+    </>
   )
 }

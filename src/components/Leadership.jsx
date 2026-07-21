@@ -1,9 +1,11 @@
+import { useState } from 'react'
 import { leadership } from '../data/content.js'
 import Reveal from './Reveal.jsx'
 import styles from './Leadership.module.css'
 
 export default function Leadership() {
-  const { name, alias, role, bio, bioExtended, highlights } = leadership
+  const { name, alias, role, bio, bioExtended, highlights, photo } = leadership
+  const [imgError, setImgError] = useState(false)
   const initials = name
     .split(' ')
     .map((w) => w[0])
@@ -20,9 +22,18 @@ export default function Leadership() {
 
         <div className={styles.grid}>
           <Reveal className={styles.portraitCol}>
-            {/* Replace this placeholder with the founder's photo when provided */}
             <div className={styles.portrait} role="img" aria-label={`${name} portrait`}>
-              <span className={styles.initials}>{initials}</span>
+              {photo && !imgError ? (
+                <img
+                  className={styles.photo}
+                  src={photo}
+                  alt={`${name} — ${role}`}
+                  loading="lazy"
+                  onError={() => setImgError(true)}
+                />
+              ) : (
+                <span className={styles.initials}>{initials}</span>
+              )}
               <div className={styles.portraitGlow} />
             </div>
             <div className={styles.nameplate}>

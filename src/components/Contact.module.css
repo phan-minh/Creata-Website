@@ -72,32 +72,6 @@
   color: var(--violet-bright);
 }
 
-/* ---- Social ---- */
-.social {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: auto;
-}
-
-.social a {
-  padding: 10px 20px;
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--text-soft);
-  transition: border-color 0.2s var(--ease), color 0.2s var(--ease),
-    background 0.2s var(--ease), transform 0.2s var(--ease);
-}
-
-.social a:hover {
-  border-color: var(--violet-bright);
-  color: #fff;
-  background: rgba(157, 92, 255, 0.12);
-  transform: translateY(-2px);
-}
-
 /* ---- Map ---- */
 .mapCol {
   display: flex;
@@ -122,10 +96,6 @@
 @media (max-width: 880px) {
   .grid {
     grid-template-columns: 1fr;
-  }
-  .social {
-    margin-top: 8px;
-    margin-bottom: 8px;
   }
   .map {
     min-height: 340px;
