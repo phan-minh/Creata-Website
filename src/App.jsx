@@ -6,7 +6,6 @@ import Stats from './components/Stats.jsx'
 import Services from './components/Services.jsx'
 import Industries from './components/Industries.jsx'
 import Products from './components/Products.jsx'
-import Leadership from './components/Leadership.jsx'
 import Process from './components/Process.jsx'
 import Projects from './components/Projects.jsx'
 import Clients from './components/Clients.jsx'
@@ -25,7 +24,6 @@ export default function App() {
         <Services />
         <Industries />
         <Products />
-        <Leadership />
         <Process />
         <Projects />
         <Clients />

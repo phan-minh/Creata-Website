@@ -18,7 +18,6 @@ export const nav = [
   { label: 'Services', href: '#services' },
   { label: 'Industries', href: '#industries' },
   { label: 'Products', href: '#products' },
-  { label: 'Meet our Founder', href: '#leadership' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -176,23 +175,6 @@ export const projects = [
     text: 'Evaluating strategic moats, consumer friction, and market entry dynamics to successfully penetrate the high-margin prestige segment.',
   },
 ]
-
-export const leadership = {
-  name: 'Pham My Linh',
-  alias: 'Alese',
-  role: 'Founder & Principal Advisor',
-  // Founder portrait — file lives in /public. Falls back to initials if missing.
-  photo: '/founder.jpg',
-  bio: "A high-impact Strategic Intelligence and Platform Growth Leader with over 16 years of expertise translating complex market data into decisive commercial triumphs. At GHN Express — Vietnam's leading e-logistics provider — she weaponized marketplace insights to orchestrate a nationwide brand repositioning that secured the #1 position in Share of Voice, captured 27% SME market share, and anchored the industry's highest retention rate within the highest-value merchant segment.",
-  bioExtended:
-    "A proven platform architect, she pioneered the strategic corporate collaboration between GHN and Ahamove to launch same-day delivery, and previously steered platform dynamics as Head of Operations at Be Group. At PNJ Group, she leveraged CRM analytics from 1.8M+ premium consumers to accelerate both retention and new-user acquisition for PNJ Watch. Grounded in Nielsen's rigorous multi-market research pedigree, she delivers the brand-health mastery and predictive intelligence that fuel ecosystem-scale growth.",
-  highlights: [
-    { value: '16+', label: 'Years of expertise' },
-    { value: '#1', label: 'Share of Voice secured at GHN' },
-    { value: '27%', label: 'SME market share captured' },
-    { value: '1.8M+', label: 'Premium consumers analyzed at PNJ' },
-  ],
-}
 
 export const clients = {
   title: 'Trusted by Industry Leaders',

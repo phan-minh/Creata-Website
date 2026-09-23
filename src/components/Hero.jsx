@@ -35,9 +35,6 @@ export default function Hero() {
           <a href="#services" className="btn btn-primary">
             Explore Our Services <ArrowIcon />
           </a>
-          <a href="#leadership" className="btn btn-ghost">
-            Meet Our Founder
-          </a>
         </div>
 
         <p className={styles.tagline}>“{company.tagline}”</p>
